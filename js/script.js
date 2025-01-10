@@ -1,4 +1,23 @@
 ///////////////////////////////////////////////////////////
+// Set Current Year
+///////////////////////////////////////////////////////////
+const yearEl = document.querySelector(".year"); //getting year class element from html
+const currentYear = new Date().getFullYear(); //now by using inbuilt functions we have stored year in a variable
+yearEl.textContent = currentYear; //assign it to the content of the class=year
+
+///////////////////////////////////////////////////////////
+// Mobile Navigation Code //
+///////////////////////////////////////////////////////////
+
+const mobNavEl = document.querySelector(".btn-mobile-nav");
+const headEl = document.querySelector(".header");
+mobNavEl.addEventListener("click", function () {
+  headEl.classList.toggle("nav-open");  ///no dot here bcoz we are just inserting class but not referring any class
+});
+
+///////////////////////////////////////////////////////////
+// Starter Code //
+///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");

@@ -135,6 +135,7 @@ don't use em because it has bugs in browsers.
   .btn-mobile-nav {
     display: block;
     position: relative;
+    z-index: 999;
   }
 
   .main-nav {
