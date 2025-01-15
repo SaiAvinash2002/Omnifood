@@ -12,12 +12,40 @@ yearEl.textContent = currentYear; //assign it to the content of the class=year
 const mobNavEl = document.querySelector(".btn-mobile-nav");
 const headEl = document.querySelector(".header");
 mobNavEl.addEventListener("click", function () {
-  headEl.classList.toggle("nav-open");  ///no dot here bcoz we are just inserting class but not referring any class
+  headEl.classList.toggle("nav-open"); ///no dot here bcoz we are just inserting class but not referring any class
 });
 
 ///////////////////////////////////////////////////////////
+// Mobile Navigation Code //
+///////////////////////////////////////////////////////////
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+
+obs.observe(sectionHeroEl);
+///////////////////////////////////////////////////////////
 // Starter Code //
 ///////////////////////////////////////////////////////////
+
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");

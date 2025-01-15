@@ -142,7 +142,7 @@ don't use em because it has bugs in browsers.
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,12 +176,14 @@ don't use em because it has bugs in browsers.
   .nav-open .icon-mobile-nav[name="menu-outline"] {
     display: none;
   }
+
   .main-nav-list {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 3.2rem;
   }
+  
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
@@ -262,37 +264,36 @@ don't use em because it has bugs in browsers.
     width: 80%;
   }
 
-  .logos img{
+  .logos img {
     height: 1.2rem;
   }
 
-  .step-img-box:nth-child(2){
+  .step-img-box:nth-child(2) {
     grid-row: 1;
   }
 
-  .step-img-box:nth-child(6){
+  .step-img-box:nth-child(6) {
     grid-row: 5;
   }
 
-  .step-img-box{
+  .step-img-box {
     transform: translateY(2.4rem);
   }
 
-  .testimonials{
+  .testimonials {
     grid-template-columns: 1fr;
   }
 
-  .gallery{
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.2rem;
   }
 
-  .cta{
+  .cta {
     grid-template-columns: 1fr;
-
   }
 
-  .cta-image{
+  .cta-image {
     height: 48rem;
     grid-row: 1;
   }
